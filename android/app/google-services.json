@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "750769988034",
+    "project_id": "artsathi-894de",
+    "storage_bucket": "artsathi-894de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750769988034:android:9bf72809525aabf9d8b65b",
+        "android_client_info": {
+          "package_name": "com.sm20.ArtSathi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwINM1JXRuAKYj0XHY1zltblzN-H1X_do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
