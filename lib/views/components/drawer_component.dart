@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:ArtSathi/controller/helper_classes/firebase_auth_helper.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ArtSathi/controller/helper_classes/firebase_firestore_helper.dart';
 import 'package:flutter/material.dart';
@@ -314,21 +315,27 @@ class _drawerComponentState extends State<drawerComponent> {
                           ],
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.logout_rounded),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Text(
-                              'LogOut',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            )
-                          ],
+                      GestureDetector(
+                        onTap: () {
+                          FirebaseAuthHelper.firebaseAuthHelper.firebaseAuth
+                              .signOut();
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(15),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Icon(Icons.logout_rounded),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                'LogOut',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
